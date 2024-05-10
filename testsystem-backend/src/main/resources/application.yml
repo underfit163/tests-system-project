@@ -1,0 +1,21 @@
+jwtSecretKey: dGVzdHRlc3R0ZXN0dGVzdHRlc3R0ZXN0dGVzdHRlc3R0ZXN0dGVzdA==
+jwtExpirationHours: 24
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/testsystem
+    username: user
+    password: 123456
+  application:
+    name: testsystem-backend
+  docker:
+    compose:
+      file: ./testsystem-backend/compose.yaml
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.yaml
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true

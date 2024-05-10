@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AmplicodeJpaToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9f2f8192-076f-4afc-a002-5a040bfd4c45" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/amplicode-jpa.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/amplicode-settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/configuration/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/controller/AuthenticationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/JwtDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/LoginDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Answer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Assessment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Option.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Question.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Ticket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/repository/AnswerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/repository/AssessmentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/repository/OptionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/repository/QuestionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/repository/ResultRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/repository/TestRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/repository/TicketRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/security/AuthEntryPointJwt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/security/AuthTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/security/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/security/UserDetailsImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/AuthenticationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/resources/db/changelog/DDL/create-test-system.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/resources/db/changelog/DML/insert-data-test-system.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/resources/db/changelog/db.changelog-master.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/create-user.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/login-user.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/.vscode/extensions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/.vscode/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/.vscode/tasks.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/app.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/app.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="com.haulmont.ampjpb.JpaLiquibaseChangeLog" />
+        <option value="com.haulmont.ampsbb.SpringConfiguration" />
+        <option value="com.haulmont.ampjpb.JpaEntity" />
+        <option value="com.haulmont.ampjpb.JpaRepository" />
+        <option value="com.haulmont.ampsbb.UserRepositoryStorage" />
+        <option value="com.haulmont.ampjpb.NewClass" />
+        <option value="com.haulmont.ampjpb.NewInterface" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="HTTP Request" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleModuleStateConfig" initialized="true" />
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2g1CrSTMPobfEl2OFU3IMDTmynC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DtoCreateDialog.HAS_SETTERS_INITIAL_INITIAL_PROP_KEY": "true",
+    "DtoCreateDialog.IS_JSON_IGNORE_UNKNOWN_PROPERTIES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "database.data.extractors.current.export.id": "SQL Inserts",
+    "database.data.extractors.current.id": "SQL Inserts",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "temurin-17",
+    "last_directory_selection": "D:/projects/testsystem/testsystem-backend/src/main/java/com/underfit/testsystembackend",
+    "last_opened_file_path": "D:/projects/testsystem/testsystem-backend/src/main/java/com/underfit/testsystembackend/security",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\testsystem\testsystem-backend\src\main\java\com\underfit\testsystembackend\security" />
+      <recent name="D:\projects\testsystem" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\testsystem\testsystem-backend\src\main\resources\db\changelog\changeset" />
+      <recent name="D:\projects\testsystem\testsystem-backend\src\main\resources\db\changelog" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.underfit.testsystembackend.controller" />
+      <recent name="com.underfit.testsystembackend.configuration" />
+      <recent name="com.underfit.testsystembackend.entity" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TestsystemBackendApplication">
+    <configuration name="All in login-user" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/login-user.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="create-user | Регистрация обычного пользователя 3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/create-user.http" index="4" requestIdentifier="Регистрация обычного пользователя 3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="login-user | admin1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/login-user.http" index="3" requestIdentifier="admin1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="login-user | user1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/login-user.http" requestIdentifier="user1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="login-user | user2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/login-user.http" index="2" requestIdentifier="user2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests (testsystem-frontend)" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/testsystem-frontend/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/testsystem-frontend/node_modules/@angular/cli" />
+      <working-directory value="$PROJECT_DIR$/testsystem-frontend" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application (testsystem-frontend)" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="TestsystemBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="testsystem-backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.underfit.testsystembackend.TestsystemBackendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Angular CLI Server (testsystem-frontend)" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/testsystem-frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.create-user | Регистрация обычного пользователя 3" />
+        <item itemvalue="HTTP Request.login-user | admin1" />
+        <item itemvalue="HTTP Request.login-user | user2" />
+        <item itemvalue="HTTP Request.login-user | user1" />
+        <item itemvalue="HTTP Request.All in login-user" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9f2f8192-076f-4afc-a002-5a040bfd4c45" name="Changes" comment="" />
+      <created>1714855897369</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714855897369</updated>
+      <workItem from="1714855898432" duration="631000" />
+      <workItem from="1714856774996" duration="9877000" />
+      <workItem from="1714897300150" duration="2324000" />
+      <workItem from="1714925210899" duration="8034000" />
+      <workItem from="1715267078112" duration="3644000" />
+      <workItem from="1715271320930" duration="21235000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

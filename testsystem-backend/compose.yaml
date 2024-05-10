@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=testsystem'
+      - 'POSTGRES_PASSWORD=123456'
+      - 'POSTGRES_USER=user'
+    healthcheck:
+      test: pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB
+      interval: 10s
+      timeout: 5s
+      start_period: 10s
+      retries: 5
+    ports:
+      - '5433:5432'
+    volumes:
+      - ./db_testsystem_data:/var/lib/postgresql/data

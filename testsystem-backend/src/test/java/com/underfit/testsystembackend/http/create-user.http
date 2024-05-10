@@ -1,0 +1,57 @@
+###Регистрация админа
+POST http://localhost:8080/api/v1/auth/signup
+Content-Type: application/json
+
+{
+  "name": "Сидоров Иван Иванович",
+  "login": "admin1",
+  "password": "admin1",
+  "role": "ROLE_ADMIN",
+  "email": "admin1@gmail.com",
+  "birthday": "16-06-1998",
+  "startWork": "12-07-2020",
+  "workNumber": 1
+}
+
+###Регистрация обычного пользователя 1
+POST http://localhost:8080/api/v1/auth/signup
+Content-Type: application/json
+
+{
+  "name": "Иванов Иван Иванович",
+  "login": "user1",
+  "password": "user1",
+  "email": "user1@gmail.com",
+  "birthday": "12-03-1998",
+  "startWork": "12-03-2022",
+  "workNumber": 1
+}
+
+###Регистрация обычного пользователя 2
+POST http://localhost:8080/api/v1/auth/signup
+Content-Type: application/json
+
+{
+  "name": "Иванов Иван Иванович",
+  "login": "user2",
+  "password": "user2",
+  "role": "ROLE_USER",
+  "email": "user2@gmail.com",
+  "birthday": "23-05-1996",
+  "startWork": "14-06-2021",
+  "workNumber": 1
+}
+
+###Регистрация обычного пользователя 3
+POST http://localhost:8080/api/v1/auth/signup
+Content-Type: application/json
+
+{
+  "name": "Иванов Иван Иванович",
+  "login": "user3",
+  "password": "user3",
+  "email": "user3@gmail.com",
+  "birthday": "12-03-1993",
+  "startWork": "12-03-2013",
+  "workNumber": 2
+}
