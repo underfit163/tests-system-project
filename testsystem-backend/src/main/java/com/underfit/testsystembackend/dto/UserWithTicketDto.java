@@ -1,7 +1,5 @@
 package com.underfit.testsystembackend.dto;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.underfit.testsystembackend.entity.Role;
 import lombok.AllArgsConstructor;
@@ -10,6 +8,8 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 /**
  * DTO for {@link com.underfit.testsystembackend.entity.User}
@@ -18,16 +18,14 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class UserDto implements Serializable {
+public class UserWithTicketDto implements Serializable {
+    private Long id;
     private String name;
     private String login;
-    @JsonIgnore
-    private String password;
     private Role role;
     private String email;
-    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate birthday;
-    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate startWork;
     private Long workNumber;
+    private Set<TicketDto> tickets = new LinkedHashSet<>();
 }

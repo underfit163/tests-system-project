@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 @Getter
 @Setter
 @Entity
@@ -19,5 +22,11 @@ public class Test {
 
     @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
+
+    @OneToMany(mappedBy = "test", orphanRemoval = true)
+    private Set<Question> questions = new LinkedHashSet<>();
+
+    @OneToMany(mappedBy = "test", orphanRemoval = true)
+    private Set<Assessment> assessments = new LinkedHashSet<>();
 
 }
