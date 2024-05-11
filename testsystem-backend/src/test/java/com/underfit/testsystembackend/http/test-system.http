@@ -1,0 +1,32 @@
+GET http://localhost:8080/api/v1/test-system/assessment/1/-20
+Authorization: Bearer {{jwt}}
+
+<> 2024-05-11T000806.200.json
+<> 2024-05-11T000734.200.json
+
+###
+GET http://localhost:8080/api/v1/test-system/tests
+Authorization: Bearer {{jwt}}
+
+<> 2024-05-11T001046.200.json
+
+###
+GET http://localhost:8080/api/v1/test-system/test/1
+Authorization: Bearer {{jwt}}
+
+<> 2024-05-11T001107.200.json
+
+###
+POST http://localhost:8080/api/v1/test-system/create/result
+Authorization: Bearer {{jwt-admin}}
+Content-Type: application/json
+
+{
+  "score": -5,
+  "testId": 1,
+  "userId": 3
+}
+
+###
+GET http://localhost:8080/api/v1/user/2/results
+Authorization: Bearer {{jwt-admin}}

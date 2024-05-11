@@ -8,8 +8,8 @@ Content-Type: application/json
   "password": "admin1",
   "role": "ROLE_ADMIN",
   "email": "admin1@gmail.com",
-  "birthday": "16-06-1998",
-  "startWork": "12-07-2020",
+  "birthday": "1998-06-16",
+  "startWork": "2020-07-12",
   "workNumber": 1
 }
 
@@ -22,8 +22,8 @@ Content-Type: application/json
   "login": "user1",
   "password": "user1",
   "email": "user1@gmail.com",
-  "birthday": "12-03-1998",
-  "startWork": "12-03-2022",
+  "birthday": "1998-03-12",
+  "startWork": "2022-03-12",
   "workNumber": 1
 }
 
@@ -37,8 +37,8 @@ Content-Type: application/json
   "password": "user2",
   "role": "ROLE_USER",
   "email": "user2@gmail.com",
-  "birthday": "23-05-1996",
-  "startWork": "14-06-2021",
+  "birthday": "1996-05-23",
+  "startWork": "2021-06-14",
   "workNumber": 1
 }
 
@@ -51,7 +51,7 @@ Content-Type: application/json
   "login": "user3",
   "password": "user3",
   "email": "user3@gmail.com",
-  "birthday": "12-03-1993",
-  "startWork": "12-03-2013",
+  "birthday": "1993-03-12",
+  "startWork": "2013-03-12",
   "workNumber": 2
 }

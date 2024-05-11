@@ -15,7 +15,9 @@ import java.io.Serializable;
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CreateResultDto implements Serializable {
+    private Long id;
     private Integer score;
+    private Boolean acceptResult;
     private Long userId;
     private Long testId;
 }

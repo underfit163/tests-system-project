@@ -4,43 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f2f8192-076f-4afc-a002-5a040bfd4c45" name="Changes" comment="init project: db migration + spring security">
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/controller/TestSystemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/AssessmentDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/CreateResultDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/OptionDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/QuestionWithOptionDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/ResultDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/TestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/TestWithQuestionDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/TicketDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/UserWithTicketDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/exception/RestErrorHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/AssessmentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/OptionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/QuestionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/ResultMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/TestMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/TicketMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/TestSystemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/TestSystemServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/get-user-info.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/amplicode-jpa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/amplicode-jpa.xml" afterDir="false" />
+    <list default="true" id="9f2f8192-076f-4afc-a002-5a040bfd4c45" name="Changes" comment="Add backend 1 path">
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/RegistrationUserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/test-system.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/controller/TestSystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/controller/TestSystemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/CreateResultDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/CreateResultDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Assessment.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Assessment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Option.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Option.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Question.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/ResultMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/ResultMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/repository/AssessmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/repository/AssessmentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/login-user.http" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/login-user.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/repository/ResultRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/repository/ResultRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/TestSystemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/TestSystemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/TestSystemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/TestSystemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/create-user.http" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/create-user.http" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +39,11 @@
         <option value="com.haulmont.ampsbb.UserRepositoryStorage" />
         <option value="Class" />
         <option value="" />
-        <option value="HTTP Request" />
         <option value="Interface" />
         <option value="com.haulmont.ampsbb.Component" />
-        <option value="com.haulmont.ampjpb.NewClass" />
         <option value="com.haulmont.ampjpb.NewInterface" />
+        <option value="com.haulmont.ampjpb.NewClass" />
+        <option value="HTTP Request" />
       </list>
     </option>
   </component>
@@ -100,6 +82,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.haulmont.ampsbb.spring.data.query.method.intention.QueryMethodDialogView.isSortable": "true",
     "database.data.extractors.current.export.id": "SQL Inserts",
     "database.data.extractors.current.id": "SQL Inserts",
     "git-widget-placeholder": "master",
@@ -141,19 +124,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.TestsystemBackendApplication">
-    <configuration name="create-user | Регистрация обычного пользователя 1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/create-user.http" index="2" requestIdentifier="Регистрация обычного пользователя 1" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="get-user-info | Get user" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/get-user-info.http" index="3" requestIdentifier="Get user" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="get-user-info | user1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/get-user-info.http" requestIdentifier="user1" runType="Run single request">
+    <configuration name="admin-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="login-user | admin1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/login-user.http" index="3" requestIdentifier="admin1" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="login-user | user1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/login-user.http" requestIdentifier="user1" runType="Run single request">
+    <configuration name="test-system | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/test-system.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="test-system | #4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/test-system.http" index="4" requestIdentifier="#4" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="test-system | #5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/test-system.http" index="5" requestIdentifier="#5" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="Tests (testsystem-frontend)" type="JavaScriptTestRunnerKarma">
@@ -186,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.get-user-info | Get user" />
+        <item itemvalue="HTTP Request.admin-requests | #1" />
+        <item itemvalue="HTTP Request.test-system | #4" />
+        <item itemvalue="HTTP Request.test-system | #5" />
         <item itemvalue="HTTP Request.login-user | admin1" />
-        <item itemvalue="HTTP Request.login-user | user1" />
-        <item itemvalue="HTTP Request.create-user | Регистрация обычного пользователя 1" />
-        <item itemvalue="HTTP Request.get-user-info | user1" />
+        <item itemvalue="HTTP Request.test-system | #1" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +191,8 @@
       <workItem from="1714925210899" duration="8034000" />
       <workItem from="1715267078112" duration="3644000" />
       <workItem from="1715271320930" duration="22325000" />
-      <workItem from="1715343311275" duration="27436000" />
+      <workItem from="1715343311275" duration="28577000" />
+      <workItem from="1715441812291" duration="9744000" />
     </task>
     <task id="LOCAL-00001" summary="init project: db migration + spring security">
       <option name="closed" value="true" />
@@ -218,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715304063956</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add backend 1 path">
+      <option name="closed" value="true" />
+      <created>1715372495740</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715372495740</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +230,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init project: db migration + spring security" />
-    <option name="LAST_COMMIT_MESSAGE" value="init project: db migration + spring security" />
+    <MESSAGE value="Add backend 1 path" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add backend 1 path" />
   </component>
 </project>

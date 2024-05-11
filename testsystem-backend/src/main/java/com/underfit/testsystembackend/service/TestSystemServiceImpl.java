@@ -6,10 +6,7 @@ import com.underfit.testsystembackend.mapper.AssessmentMapper;
 import com.underfit.testsystembackend.mapper.QuestionMapper;
 import com.underfit.testsystembackend.mapper.ResultMapper;
 import com.underfit.testsystembackend.mapper.TestMapper;
-import com.underfit.testsystembackend.repository.AssessmentRepository;
-import com.underfit.testsystembackend.repository.QuestionRepository;
-import com.underfit.testsystembackend.repository.ResultRepository;
-import com.underfit.testsystembackend.repository.TestRepository;
+import com.underfit.testsystembackend.repository.*;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -24,6 +21,8 @@ import java.util.List;
 @Service
 @Transactional(readOnly = true)
 public class TestSystemServiceImpl implements TestSystemService {
+
+    private final UserRepository userRepository;
 
     private final AssessmentMapper assessmentMapper;
 
@@ -68,7 +67,13 @@ public class TestSystemServiceImpl implements TestSystemService {
     public ResultDto createResult(CreateResultDto createResultDto) {
         log.info("Result before mapping: {}", createResultDto);
         Result result = resultMapper.toEntity(createResultDto);
-        log.info("Result after mapping: {}", result);
+        result.setUser(userRepository
+                .findById(createResultDto.getUserId())
+                .orElseThrow(() -> new EntityNotFoundException("Пользователя с идентификатором %s не существует"
+                        .formatted(createResultDto.getUserId()))));
+        result.setTest(testRepository.findById(createResultDto.getTestId())
+                .orElseThrow(() -> new EntityNotFoundException("Теста с идентификатором %s не существует"
+                        .formatted(createResultDto.getUserId()))));
         return resultMapper.toDto(resultRepository.save(result));
     }
 
@@ -78,5 +83,14 @@ public class TestSystemServiceImpl implements TestSystemService {
                 .findAssessmentByTestIdAndScore(testId, score)
                 .orElseThrow(() -> new EntityNotFoundException("Критерия c набранным количеством очков=%s для указанного теста с id=%s не существует"
                         .formatted(score, testId))));
+    }
+
+    @Override
+    public void acceptResult(Long resultId, Boolean accept) {
+        Result result = resultRepository.findById(resultId)
+                .orElseThrow(() -> new EntityNotFoundException("Теста с идентификатором %s не существует"
+                        .formatted(resultId)));
+        result.setAcceptResult(accept);
+        resultRepository.save(result);
     }
 }

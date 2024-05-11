@@ -4,6 +4,7 @@ import com.underfit.testsystembackend.dto.CreateResultDto;
 import com.underfit.testsystembackend.service.TestSystemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -28,7 +29,7 @@ public class TestSystemController {
     public ResponseEntity<?> getQuestionById(@PathVariable Long id) {
         return ResponseEntity.ok(testSystemService.getQuestionById(id));
     }
-
+    @PreAuthorize("hasRole('ADMIN') or #createResultDto.userId == authentication.principal.id")
     @PostMapping("/create/result")
     public ResponseEntity<?> createResult(@RequestBody CreateResultDto createResultDto) {
         return ResponseEntity.ok(testSystemService.createResult(createResultDto));
@@ -37,6 +38,11 @@ public class TestSystemController {
     @GetMapping("/assessment/{testId}/{score}")
     public ResponseEntity<?> getAssessmentByTestIdAndScore(@PathVariable Long testId, @PathVariable Integer score) {
         return ResponseEntity.ok(testSystemService.getAssessmentByTestIdAndScore(testId, score));
+    }
+
+    @GetMapping("/accept/result/{id}/{accept}")
+    public void acceptResult(@PathVariable Long id, @PathVariable Boolean accept) {
+        testSystemService.acceptResult(id, accept);
     }
 }
 

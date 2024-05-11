@@ -26,5 +26,11 @@ public class UserController {
     public ResponseEntity<?> getResultsTestByUserId(@PathVariable Long id) {
         return ResponseEntity.ok(userService.getResultsByUserId(id));
     }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @GetMapping("/results/test/{id}")
+    public ResponseEntity<?> getResultsByTestId(@PathVariable Long id) {
+        return ResponseEntity.ok(userService.getResultsByTestId(id));
+    }
 }
 

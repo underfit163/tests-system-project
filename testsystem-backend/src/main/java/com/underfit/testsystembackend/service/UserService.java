@@ -20,4 +20,11 @@ public interface UserService {
      * @return результаты
      */
     List<ResultDto> getResultsByUserId(Long id);
+
+    /**
+     * Получение результатов пользователей по тесту без карточки пользователя
+     * @param testId тест
+     * @return Результаты пользователей без карточки
+     */
+    List<ResultDto> getResultsByTestId(Long testId);
 }

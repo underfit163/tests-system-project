@@ -7,7 +7,7 @@ import com.underfit.testsystembackend.entity.Test;
 import com.underfit.testsystembackend.entity.User;
 import org.mapstruct.*;
 
-@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = MappingConstants.ComponentModel.SPRING)
+@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = MappingConstants.ComponentModel.SPRING, uses = {UserMapper.class, TestMapper.class})
 public interface ResultMapper {
     Result toEntity(ResultDto resultDto);
 
@@ -15,7 +15,6 @@ public interface ResultMapper {
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     Result partialUpdate(ResultDto resultDto, @MappingTarget Result result);
-
 
     @Mapping(source = "testId", target = "test.id")
     @Mapping(source = "userId", target = "user.id")

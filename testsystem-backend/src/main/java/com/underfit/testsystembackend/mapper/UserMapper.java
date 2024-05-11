@@ -1,6 +1,7 @@
 package com.underfit.testsystembackend.mapper;
 
 import com.underfit.testsystembackend.dto.LoginDto;
+import com.underfit.testsystembackend.dto.RegistrationUserDto;
 import com.underfit.testsystembackend.dto.UserDto;
 import com.underfit.testsystembackend.dto.UserWithTicketDto;
 import com.underfit.testsystembackend.entity.User;
@@ -15,12 +16,12 @@ public interface UserMapper {
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     User partialUpdate(LoginDto loginDto, @MappingTarget User user);
 
-    User toEntity(UserDto userDto);
+    User toEntity(RegistrationUserDto registrationUserDto);
 
-    UserDto toDto(User user);
+    RegistrationUserDto toRegistrationUserDto(User user);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    User partialUpdate(UserDto userDto, @MappingTarget User user);
+    User partialUpdate(RegistrationUserDto registrationUserDto, @MappingTarget User user);
 
     User toEntity(UserWithTicketDto userWithTicketDto);
 
@@ -33,4 +34,11 @@ public interface UserMapper {
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     User partialUpdate(UserWithTicketDto userWithTicketDto, @MappingTarget User user);
+
+    User toEntity(UserDto userDto);
+
+    UserDto toDto(User user);
+
+    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+    User partialUpdate(UserDto userDto, @MappingTarget User user);
 }
