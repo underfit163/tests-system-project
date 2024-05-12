@@ -3,10 +3,12 @@ package com.underfit.testsystembackend.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+@ToString
 @Getter
 @Setter
 @Entity
@@ -24,9 +26,11 @@ public class Test {
     private String description;
 
     @OneToMany(mappedBy = "test", orphanRemoval = true)
+    @ToString.Exclude
     private Set<Question> questions = new LinkedHashSet<>();
 
     @OneToMany(mappedBy = "test", orphanRemoval = true)
+    @ToString.Exclude
     private Set<Assessment> assessments = new LinkedHashSet<>();
 
 }

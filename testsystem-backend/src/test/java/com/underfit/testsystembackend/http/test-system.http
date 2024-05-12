@@ -18,8 +18,8 @@ Authorization: Bearer {{jwt}}
 
 ###
 POST http://localhost:8080/api/v1/test-system/create/result
-Authorization: Bearer {{jwt-admin}}
 Content-Type: application/json
+Authorization: Bearer {{jwt-admin}}
 
 {
   "score": -5,
@@ -30,3 +30,24 @@ Content-Type: application/json
 ###
 GET http://localhost:8080/api/v1/user/2/results
 Authorization: Bearer {{jwt-admin}}
+
+###
+POST http://localhost:8080/api/v1/test-system/create/answers
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+[
+  {
+    "resultId": 7,
+    "optionId": 7
+  },
+  {
+    "resultId": 7,
+    "optionId": 8
+  }
+]
+
+###
+GET http://localhost:8080/api/v1/test-system/answers/result/7
+Content-Type: application/json
+Authorization: Bearer {{jwt}}

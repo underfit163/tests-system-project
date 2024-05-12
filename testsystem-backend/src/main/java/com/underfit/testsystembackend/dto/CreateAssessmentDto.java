@@ -14,7 +14,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class AssessmentDto implements Serializable {
+public class CreateAssessmentDto implements Serializable {
     private Long id;
     private String assessmentName;
     private Integer minScore;

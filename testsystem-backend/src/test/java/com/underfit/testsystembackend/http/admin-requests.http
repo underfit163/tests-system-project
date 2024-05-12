@@ -1,3 +1,37 @@
 ###
 GET http://localhost:8080/api/v1/user/results/test/1
 Authorization: Bearer {{jwt-admin}}
+
+###
+POST http://localhost:8080/api/v1/user/create/test
+Content-Type: application/json
+Authorization: Bearer {{jwt-admin}}
+
+{
+  "testName": "test2",
+  "description": "test2",
+  "questions": [{
+    "questionText": "question2",
+    "options": [{
+      "optionText": "option2",
+      "score": 2
+    }]
+  }],
+  "assessments": [{
+    "assessmentName": "assessment2",
+    "minScore": 0,
+    "maxScore": 10,
+    "resultDescription": "assessmentResultDescription"
+  }]
+}
+
+###
+POST http://localhost:8080/api/v1/user/results/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Authorization: Bearer {{jwt-admin}}
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="file.csv"
+
+< file.csv
+--WebAppBoundary--

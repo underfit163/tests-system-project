@@ -1,5 +1,6 @@
 package com.underfit.testsystembackend.mapper;
 
+import com.underfit.testsystembackend.dto.CreateQuestionDto;
 import com.underfit.testsystembackend.dto.QuestionWithOptionDto;
 import com.underfit.testsystembackend.entity.Question;
 import org.mapstruct.*;
@@ -17,4 +18,11 @@ public interface QuestionMapper {
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     Question partialUpdate(QuestionWithOptionDto questionWithOptionDto, @MappingTarget Question question);
+
+    Question toEntity(CreateQuestionDto createQuestionDto);
+
+    CreateQuestionDto toCreateQuestionDto(Question question);
+
+    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+    Question partialUpdate(CreateQuestionDto createQuestionDto, @MappingTarget Question question);
 }

@@ -6,18 +6,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 /**
- * DTO for {@link com.underfit.testsystembackend.entity.Assessment}
+ * DTO for {@link com.underfit.testsystembackend.entity.Question}
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class AssessmentDto implements Serializable {
+public class CreateQuestionDto implements Serializable {
     private Long id;
-    private String assessmentName;
-    private Integer minScore;
-    private Integer maxScore;
-    private String resultDescription;
+    private String questionText;
+    private Set<CreateOptionDto> options = new LinkedHashSet<>();
 }

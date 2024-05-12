@@ -1,11 +1,18 @@
 package com.underfit.testsystembackend.controller;
 
+import com.opencsv.exceptions.CsvValidationException;
+import com.underfit.testsystembackend.dto.CreateTestDto;
+import com.underfit.testsystembackend.dto.FilterResultDto;
 import com.underfit.testsystembackend.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 @Slf4j
 @RestController
@@ -31,6 +38,24 @@ public class UserController {
     @GetMapping("/results/test/{id}")
     public ResponseEntity<?> getResultsByTestId(@PathVariable Long id) {
         return ResponseEntity.ok(userService.getResultsByTestId(id));
+    }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @PostMapping("/create/test")
+    public ResponseEntity<?> getResultsByTestId(@RequestBody CreateTestDto createTestDto) {
+        return ResponseEntity.ok(userService.createTest(createTestDto));
+    }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @PostMapping("/results/upload")
+    public ResponseEntity<?> createResultsFromCsv(@RequestParam("file") MultipartFile file) throws IOException, CsvValidationException {
+        return ResponseEntity.ok(userService.createResultsFromCsv(file));
+    }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @PostMapping("/filter/results")
+    public ResponseEntity<?> filterResults(@RequestBody FilterResultDto filterResultDto) {
+        return ResponseEntity.ok(userService.getResultByFilter(filterResultDto));
     }
 }
 

@@ -47,8 +47,23 @@ public interface TestSystemService {
 
     /**
      * Принятие результата теста или нет
+     *
      * @param resultId Результат теста
-     * @param accept Принять/отклонить
+     * @param accept   Принять/отклонить
      */
     void acceptResult(Long resultId, Boolean accept);
+
+    /**
+     * Сохранение ответов пользователя на вопросы теста
+     * @param createAnswers ответы
+     * @return результат сохранения ответов
+     */
+    List<AnswerDto> createAnswers(List<CreateAnswerDto> createAnswers);
+
+    /**
+     * Получение ответов на тест для пользователя(по resultId)
+     * @param resultId Результат теста
+     * @return Ответы
+     */
+    List<AnswerDto> getAnswersByResultId(Long resultId);
 }

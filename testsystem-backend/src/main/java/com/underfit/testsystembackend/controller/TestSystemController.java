@@ -1,11 +1,14 @@
 package com.underfit.testsystembackend.controller;
 
+import com.underfit.testsystembackend.dto.CreateAnswerDto;
 import com.underfit.testsystembackend.dto.CreateResultDto;
 import com.underfit.testsystembackend.service.TestSystemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api/v1/test-system")
@@ -43,6 +46,20 @@ public class TestSystemController {
     @GetMapping("/accept/result/{id}/{accept}")
     public void acceptResult(@PathVariable Long id, @PathVariable Boolean accept) {
         testSystemService.acceptResult(id, accept);
+    }
+
+    @PreAuthorize("""
+            hasRole('ADMIN') or @resultRepository.findById(#createAnswerDtoList.get(0).resultId).orElseThrow().user.id == authentication.principal.id""")
+    @PostMapping("/create/answers")
+    public ResponseEntity<?> createAnswers(@RequestBody List<CreateAnswerDto> createAnswerDtoList) {
+        return ResponseEntity.ok(testSystemService.createAnswers(createAnswerDtoList));
+    }
+
+    @PreAuthorize("""
+            hasRole('ADMIN') or @resultRepository.findById(#resultId).orElseThrow().user.id == authentication.principal.id""")
+    @GetMapping("/answers/result/{resultId}")
+    public ResponseEntity<?> getAnswersByResultId(@PathVariable Long resultId) {
+        return ResponseEntity.ok(testSystemService.getAnswersByResultId(resultId));
     }
 }
 

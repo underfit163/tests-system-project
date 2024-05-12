@@ -8,16 +8,14 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 
 /**
- * DTO for {@link com.underfit.testsystembackend.entity.Assessment}
+ * DTO for {@link com.underfit.testsystembackend.entity.Option}
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class AssessmentDto implements Serializable {
+public class CreateOptionDto implements Serializable {
     private Long id;
-    private String assessmentName;
-    private Integer minScore;
-    private Integer maxScore;
-    private String resultDescription;
+    private String optionText;
+    private Integer score;
 }
