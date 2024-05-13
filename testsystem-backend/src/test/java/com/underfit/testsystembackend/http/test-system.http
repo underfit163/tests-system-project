@@ -1,22 +1,16 @@
-GET http://localhost:8080/api/v1/test-system/assessment/1/-20
-Authorization: Bearer {{jwt}}
-
-<> 2024-05-11T000806.200.json
-<> 2024-05-11T000734.200.json
-
-###
+### Получение всех тестов системы
 GET http://localhost:8080/api/v1/test-system/tests
 Authorization: Bearer {{jwt}}
 
-<> 2024-05-11T001046.200.json
-
-###
-GET http://localhost:8080/api/v1/test-system/test/1
+### Получение теста по id, связанных вопросов и вариантов ответов к ним
+GET http://localhost:8080/api/v1/test-system/test/7
 Authorization: Bearer {{jwt}}
 
-<> 2024-05-11T001107.200.json
+### Получение вопроса по id вопроса и ответов к нему
+GET http://localhost:8080/api/v1/test-system/question/1
+Authorization: Bearer {{jwt}}
 
-###
+### Сохранение результата теста для пользователя
 POST http://localhost:8080/api/v1/test-system/create/result
 Content-Type: application/json
 Authorization: Bearer {{jwt-admin}}
@@ -27,11 +21,15 @@ Authorization: Bearer {{jwt-admin}}
   "userId": 3
 }
 
-###
-GET http://localhost:8080/api/v1/user/2/results
-Authorization: Bearer {{jwt-admin}}
+### Получение критерия оценивания за тест по баллам, которые набрал за тест пользователь
+GET http://localhost:8080/api/v1/test-system/assessment/1/-20
+Authorization: Bearer {{jwt}}
 
-###
+### Принятие результата теста или нет
+GET http://localhost:8080/api/v1/test-system/accept/result/10/true
+Authorization: Bearer {{jwt}}
+
+### Сохранение ответов пользователя на вопросы теста
 POST http://localhost:8080/api/v1/test-system/create/answers
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
@@ -47,7 +45,7 @@ Authorization: Bearer {{jwt}}
   }
 ]
 
-###
+### Получение ответов на тест для пользователя(по resultId)
 GET http://localhost:8080/api/v1/test-system/answers/result/7
 Content-Type: application/json
 Authorization: Bearer {{jwt}}

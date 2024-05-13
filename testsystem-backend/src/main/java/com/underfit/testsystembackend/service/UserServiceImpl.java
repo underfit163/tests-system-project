@@ -11,11 +11,9 @@ import com.underfit.testsystembackend.mapper.TestMapper;
 import com.underfit.testsystembackend.mapper.UserMapper;
 import com.underfit.testsystembackend.repository.*;
 import jakarta.persistence.EntityNotFoundException;
-import jakarta.persistence.criteria.Predicate;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -117,36 +115,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<ResultDto> getResultByFilter(FilterResultDto filterResultDto) {
-        Specification<Result> spec = (root, query, criteriaBuilder) -> {
-            List<Predicate> predicates = new ArrayList<>();
-
-            // Фильтр по testId
-            if (filterResultDto.getTestId() != null) {
-                predicates.add(criteriaBuilder.equal(root.get("test").get("id"), filterResultDto.getTestId()));
-            }
-
-            // Фильтр по userId
-            if (filterResultDto.getUserId() != null) {
-                predicates.add(criteriaBuilder.equal(root.get("user").get("id"), filterResultDto.getUserId()));
-            }
-
-            // Фильтр по score
-            if (filterResultDto.getScore() != null) {
-                predicates.add(criteriaBuilder.equal(root.get("score"), filterResultDto.getScore()));
-            }
-
-            // Фильтр по acceptResult
-            if (filterResultDto.getAcceptResult() != null) {
-                predicates.add(criteriaBuilder.equal(root.get("acceptResult"), filterResultDto.getAcceptResult()));
-            }
-
-            return criteriaBuilder.and(predicates.toArray(new Predicate[0]));
-        };
-
-        List<Result> results = resultRepository.findAll(spec);
+    public List<ResultDto> getResultByFilter(ResultFilter resultFilter) {
+        log.info("Filter for result: {}", resultFilter);
+        List<Result> results = resultRepository.findAll(resultFilter.toSpecification());
         return results.stream()
                 .map(resultMapper::toDto)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<UserDto> getUsers() {
+        return userRepository.findAll(Sort.by("id")).stream().map(userMapper::toDto).toList();
     }
 }

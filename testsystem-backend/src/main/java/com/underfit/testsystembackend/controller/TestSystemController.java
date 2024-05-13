@@ -19,7 +19,7 @@ public class TestSystemController {
     private final TestSystemService testSystemService;
 
     @GetMapping("/tests")
-    public ResponseEntity<?> findTests() {
+    public ResponseEntity<?> getTests() {
         return ResponseEntity.ok(testSystemService.getTests());
     }
 

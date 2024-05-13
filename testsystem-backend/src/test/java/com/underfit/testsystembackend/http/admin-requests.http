@@ -1,8 +1,16 @@
-###
-GET http://localhost:8080/api/v1/user/results/test/1
+### Данные о пользователе вместе с его билетами для профиля
+GET http://localhost:8080/api/v1/user/1/info
 Authorization: Bearer {{jwt-admin}}
 
-###
+### Получение результатов теста для пользователя
+GET http://localhost:8080/api/v1/user/2/results
+Authorization: Bearer {{jwt-admin}}
+
+### Получение результатов пользователей по тесту без карточки пользователя
+GET http://localhost:8080/api/v1/user/test/1/results
+Authorization: Bearer {{jwt-admin}}
+
+### Создание теста с вопросами и вариантами ответа, а также критериями оценивания для админа
 POST http://localhost:8080/api/v1/user/create/test
 Content-Type: application/json
 Authorization: Bearer {{jwt-admin}}
@@ -25,7 +33,7 @@ Authorization: Bearer {{jwt-admin}}
   }]
 }
 
-###
+### Загрузить результат тестов через csv файл
 POST http://localhost:8080/api/v1/user/results/upload
 Content-Type: multipart/form-data; boundary=WebAppBoundary
 Authorization: Bearer {{jwt-admin}}
@@ -35,3 +43,22 @@ Content-Disposition: form-data; name="file"; filename="file.csv"
 
 < file.csv
 --WebAppBoundary--
+
+### Фильтрация по результатам для админа
+POST http://localhost:8080/api/v1/user/filter/results
+Content-Type: application/json
+Authorization: Bearer {{jwt-admin}}
+
+{
+  "userId": 3,
+  "acceptResult": false,
+  "countYearWorkLte": 3,
+  "userWorkNumber": 1,
+  "scoreLte": 30,
+  "testId": 1
+}
+
+### Получить всех пользователей
+GET http://localhost:8080/api/v1/user/users
+Content-Type: application/json
+Authorization: Bearer {{jwt-admin}}

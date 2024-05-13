@@ -7,36 +7,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f2f8192-076f-4afc-a002-5a040bfd4c45" name="Changes" comment="Add backend 2 path">
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/AnswerDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/CreateAnswerDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/CreateAssessmentDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/CreateOptionDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/CreateQuestionDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/CreateTestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/FilterResultDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/AnswerMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/file.csv" afterDir="false" />
+    <list default="true" id="9f2f8192-076f-4afc-a002-5a040bfd4c45" name="Changes" comment="Add backend 3 path">
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/ResultFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/controller/TestSystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/controller/TestSystemController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/AssessmentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/AssessmentDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Assessment.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Assessment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/exception/RestErrorHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/exception/RestErrorHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/AssessmentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/AssessmentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/OptionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/OptionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/QuestionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/QuestionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/TestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/TestMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/repository/AnswerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/repository/AnswerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/repository/ResultRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/repository/ResultRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/TestSystemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/TestSystemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/TestSystemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/TestSystemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/FilterResultDto.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/login-user.http" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/login-user.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/get-user-info.http" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/test-system.http" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/test-system.http" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,8 +36,10 @@
         <option value="com.haulmont.ampsbb.Component" />
         <option value="HTTP Request" />
         <option value="com.haulmont.ampjpb.NewInterface" />
-        <option value="com.haulmont.ampjpb.NewClass" />
         <option value="Class" />
+        <option value="com.haulmont.ampjpb.NewClass" />
+        <option value="com.haulmont.ampjpb.NewRecord" />
+        <option value="HTTP Public Environment File" />
       </list>
     </option>
   </component>
@@ -83,43 +64,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ControllerAdviceClass": "com.underfit.testsystembackend.exception.RestErrorHandler",
-    "DtoCreateDialog.HAS_SETTERS_INITIAL_INITIAL_PROP_KEY": "true",
-    "DtoCreateDialog.IS_JSON_IGNORE_UNKNOWN_PROPERTIES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.haulmont.ampsbb.spring.data.query.method.intention.QueryMethodDialogView.isSortable": "true",
-    "database.data.extractors.current.export.id": "SQL Inserts",
-    "database.data.extractors.current.id": "SQL Inserts",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "temurin-17",
-    "last_directory_selection": "D:/projects/testsystem/testsystem-backend/src/main/java/com/underfit/testsystembackend",
-    "last_opened_file_path": "D:/projects/testsystem",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.haulmont.ampjpb.repository",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ControllerAdviceClass&quot;: &quot;com.underfit.testsystembackend.exception.RestErrorHandler&quot;,
+    &quot;DtoCreateDialog.HAS_SETTERS_INITIAL_INITIAL_PROP_KEY&quot;: &quot;true&quot;,
+    &quot;DtoCreateDialog.IS_JSON_IGNORE_UNKNOWN_PROPERTIES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.haulmont.ampsbb.spring.data.query.method.intention.QueryMethodDialogView.isSortable&quot;: &quot;true&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
+    &quot;database.data.extractors.current.id&quot;: &quot;SQL Inserts&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;temurin-17&quot;,
+    &quot;last_directory_selection&quot;: &quot;D:/projects/testsystem/testsystem-backend/src/main/java/com/underfit/testsystembackend&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/projects/testsystem&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.haulmont.ampjpb.repository&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projects\testsystem" />
@@ -139,19 +120,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.TestsystemBackendApplication">
-    <configuration name="admin-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
+    <configuration name="admin-requests | Данные о пользователе вместе с его билетами для профиля#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" requestIdentifier="Данные о пользователе вместе с его билетами для профиля#1" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="admin-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" index="3" requestIdentifier="#3" runType="Run single request">
+    <configuration name="admin-requests | Данные о пользователе вместе с его билетами для профиля#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" index="2" requestIdentifier="Данные о пользователе вместе с его билетами для профиля#2" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="test-system | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/test-system.http" requestIdentifier="#1" runType="Run single request">
+    <configuration name="admin-requests | Получение результатов пользователей по тесту без карточки пользователя" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" index="3" requestIdentifier="Получение результатов пользователей по тесту без карточки пользователя" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="test-system | #6" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/test-system.http" index="6" requestIdentifier="#6" runType="Run single request">
+    <configuration name="admin-requests | Данные о пользователе вместе с его билетами для профиля" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" requestIdentifier="Данные о пользователе вместе с его билетами для профиля" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="test-system | #7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/test-system.http" index="7" requestIdentifier="#7" runType="Run single request">
+    <configuration name="test-system | Получение результатов теста для пользователя" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/test-system.http" index="5" requestIdentifier="Получение результатов теста для пользователя" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="Tests (testsystem-frontend)" type="JavaScriptTestRunnerKarma">
@@ -184,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.admin-requests | #3" />
-        <item itemvalue="HTTP Request.admin-requests | #2" />
-        <item itemvalue="HTTP Request.test-system | #1" />
-        <item itemvalue="HTTP Request.test-system | #7" />
-        <item itemvalue="HTTP Request.test-system | #6" />
+        <item itemvalue="HTTP Request.admin-requests | Получение результатов пользователей по тесту без карточки пользователя" />
+        <item itemvalue="HTTP Request.test-system | Получение результатов теста для пользователя" />
+        <item itemvalue="HTTP Request.admin-requests | Данные о пользователе вместе с его билетами для профиля#2" />
+        <item itemvalue="HTTP Request.admin-requests | Данные о пользователе вместе с его билетами для профиля#1" />
+        <item itemvalue="HTTP Request.admin-requests | Данные о пользователе вместе с его билетами для профиля" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +189,9 @@
       <workItem from="1715271320930" duration="22325000" />
       <workItem from="1715343311275" duration="28577000" />
       <workItem from="1715441812291" duration="10052000" />
-      <workItem from="1715511948471" duration="33288000" />
+      <workItem from="1715511948471" duration="33986000" />
+      <workItem from="1715622565399" duration="9092000" />
+      <workItem from="1715633266427" duration="4075000" />
     </task>
     <task id="LOCAL-00001" summary="init project: db migration + spring security">
       <option name="closed" value="true" />
@@ -234,7 +217,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715452073417</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add backend 3 path">
+      <option name="closed" value="true" />
+      <created>1715552122101</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715552122101</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +247,7 @@
     <MESSAGE value="init project: db migration + spring security" />
     <MESSAGE value="Add backend 1 path" />
     <MESSAGE value="Add backend 2 path" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add backend 2 path" />
+    <MESSAGE value="Add backend 3 path" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add backend 3 path" />
   </component>
 </project>

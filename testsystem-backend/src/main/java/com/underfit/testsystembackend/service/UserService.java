@@ -1,13 +1,9 @@
 package com.underfit.testsystembackend.service;
 
 import com.opencsv.exceptions.CsvValidationException;
-import com.underfit.testsystembackend.dto.CreateTestDto;
-import com.underfit.testsystembackend.dto.FilterResultDto;
-import com.underfit.testsystembackend.dto.ResultDto;
-import com.underfit.testsystembackend.dto.UserWithTicketDto;
+import com.underfit.testsystembackend.dto.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 
@@ -52,8 +48,14 @@ public interface UserService {
 
     /**
      * Фильтрация по результатам для админа
-     * @param filterResultDto Фильтр
+     * @param resultFilter Фильтр
      * @return результаты
      */
-    List<ResultDto> getResultByFilter(FilterResultDto filterResultDto);
+    List<ResultDto> getResultByFilter(ResultFilter resultFilter);
+
+    /**
+     * Получить всех пользователей
+     * @return Пользователи
+     */
+    List<UserDto> getUsers();
 }
