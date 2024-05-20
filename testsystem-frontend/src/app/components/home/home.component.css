@@ -1,0 +1,14 @@
+.mat-card {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.card-image {
+  max-height: 200px;
+}
+
+.header-image {
+  background-image: url('https://img.freepik.com/premium-photo/male-female-profile-avatar-user-avatars-gender-icons_1020867-75560.jpg');
+  background-size: cover;
+  margin-top: -10px;
+}

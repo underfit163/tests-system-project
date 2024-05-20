@@ -1,0 +1,37 @@
+<mat-card>
+  <mat-card-title>Вход</mat-card-title>
+  <mat-card-content>
+    <form #f="ngForm" [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Логин:</mat-label>
+          <input matInput type="login" formControlName="login" placeholder="Твой логин">
+          <mat-icon matSuffix></mat-icon>
+          <mat-hint>Введите логин</mat-hint>
+          <mat-error *ngIf="form.controls['login'].errors?.['required']">Логин обязателен</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Пароль:</mat-label>
+          <input matInput [type]="flag ? 'password' : 'text'" placeholder="Твой пароль"
+                 formControlName="password">
+          <mat-icon (click)="flag=!flag" matSuffix>{{ flag ? 'visibility' : 'visibility_off' }}</mat-icon>
+          <mat-hint>Введите пароль</mat-hint>
+          <mat-error *ngIf="form.controls['password'].errors?.['required']">Пароль обязателен</mat-error>
+          <mat-error *ngIf="form.controls['password'].errors?.['minlength']">
+            Введите минимум 5 символов
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Войти</button>
+      </div>
+      <div *ngIf="f.submitted && isLoginFailed" class="alert alert-warning" role="alert">
+        Ошибка входа. {{ errorMessage }}
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

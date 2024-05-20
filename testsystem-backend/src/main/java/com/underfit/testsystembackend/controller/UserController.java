@@ -41,7 +41,7 @@ public class UserController {
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create/test")
-    public ResponseEntity<?> getResultsByTestId(@RequestBody CreateTestDto createTestDto) {
+    public ResponseEntity<?> createTest(@RequestBody CreateTestDto createTestDto) {
         return ResponseEntity.ok(userService.createTest(createTestDto));
     }
 

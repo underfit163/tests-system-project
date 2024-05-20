@@ -7,16 +7,114 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f2f8192-076f-4afc-a002-5a040bfd4c45" name="Changes" comment="Add backend 3 path">
-      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/ResultFilter.java" afterDir="false" />
+    <list default="true" id="9f2f8192-076f-4afc-a002-5a040bfd4c45" name="Changes" comment="Add angular frontend 1 part">
+      <change afterPath="$PROJECT_DIR$/diagram-class.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagram-class2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/QuestionDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/admin-results/admin-results.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/admin-results/admin-results.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/admin-results/admin-results.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/admin-results/admin-results.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/auth/login/login.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/auth/login/login.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/auth/login/login.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/auth/login/login.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/auth/register/register.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/auth/register/register.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/auth/register/register.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/auth/register/register.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/create-test/create-test.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/create-test/create-test.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/create-test/create-test.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/create-test/create-test.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/home/home.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/home/home.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/home/home.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/home/home.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/profile/profile.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/profile/profile.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/profile/profile.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/profile/profile.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/test-detail/test-detail.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/test-detail/test-detail.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/test-detail/test-detail.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/test-detail/test-detail.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/test-result/test-result.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/test-result/test-result.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/test-result/test-result.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/test-result/test-result.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/tests/tests.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/tests/tests.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/tests/tests.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/tests/tests.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/user-results/user-results.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/user-results/user-results.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/user-results/user-results.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/user-results/user-results.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/configs/my-date-formats.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/guards/admin.guard.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/guards/admin.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/guards/auth.guard.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/guards/auth.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/guards/user.guard.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/guards/user.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/helpers/help-functions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/interceptors/http.interceptor.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/interceptors/http.interceptor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/answer-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/assessment-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/create-answer-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/create-assessment-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/create-option-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/create-question-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/create-result-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/create-test-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/jwt-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/login-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/option-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/question-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/question-with-option-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/registration-user-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/result-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/result-filter.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/test-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/test-with-question-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/ticket-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/user-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/user-with-ticket-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/services/auth.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/services/auth.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/services/test-system.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/services/test-system.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/services/token-storage.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/services/token-storage.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/services/user.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/services/user.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/environments/environment.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/configuration/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/configuration/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/FilterResultDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/OptionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/OptionDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/OptionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/OptionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/QuestionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/mapper/QuestionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/resources/db/changelog/DML/insert-data-test-system.sql" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/resources/db/changelog/DML/insert-data-test-system.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/get-user-info.http" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/test-system.http" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/test-system.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/app.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/app.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +135,10 @@
         <option value="HTTP Request" />
         <option value="com.haulmont.ampjpb.NewInterface" />
         <option value="Class" />
-        <option value="com.haulmont.ampjpb.NewClass" />
         <option value="com.haulmont.ampjpb.NewRecord" />
         <option value="HTTP Public Environment File" />
+        <option value="TypeScript File" />
+        <option value="com.haulmont.ampjpb.NewClass" />
       </list>
     </option>
   </component>
@@ -85,14 +184,15 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;temurin-17&quot;,
     &quot;last_directory_selection&quot;: &quot;D:/projects/testsystem/testsystem-backend/src/main/java/com/underfit/testsystembackend&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/projects/testsystem&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/projects/testsystem/testsystem-frontend/src/app/configs&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.haulmont.ampjpb.repository&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\projects\\testsystem\\testsystem-frontend\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -103,6 +203,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\testsystem\testsystem-frontend\src\app\configs" />
+      <recent name="D:\projects\testsystem\testsystem-frontend\src" />
       <recent name="D:\projects\testsystem" />
       <recent name="D:\projects\testsystem\testsystem-backend\src\main\java\com\underfit\testsystembackend\security" />
     </key>
@@ -123,16 +225,16 @@
     <configuration name="admin-requests | Данные о пользователе вместе с его билетами для профиля#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" requestIdentifier="Данные о пользователе вместе с его билетами для профиля#1" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="admin-requests | Данные о пользователе вместе с его билетами для профиля#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" index="2" requestIdentifier="Данные о пользователе вместе с его билетами для профиля#2" runType="Run single request">
+    <configuration name="login-user | user1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/login-user.http" requestIdentifier="user1" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="admin-requests | Получение результатов пользователей по тесту без карточки пользователя" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" index="3" requestIdentifier="Получение результатов пользователей по тесту без карточки пользователя" runType="Run single request">
+    <configuration name="test-system | Получение критерия оценивания за тест по баллам, которые набрал за тест пользователь" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/test-system.http" index="6" requestIdentifier="Получение критерия оценивания за тест по баллам, которые набрал за тест пользователь" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="admin-requests | Данные о пользователе вместе с его билетами для профиля" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" requestIdentifier="Данные о пользователе вместе с его билетами для профиля" runType="Run single request">
+    <configuration name="test-system | Сохранение ответов пользователя на вопросы теста" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/test-system.http" index="8" requestIdentifier="Сохранение ответов пользователя на вопросы теста" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="test-system | Получение результатов теста для пользователя" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/test-system.http" index="5" requestIdentifier="Получение результатов теста для пользователя" runType="Run single request">
+    <configuration name="test-system | Получение ответов на тест для пользователя(по resultId)" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/test-system.http" index="9" requestIdentifier="Получение ответов на тест для пользователя(по resultId)" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="Tests (testsystem-frontend)" type="JavaScriptTestRunnerKarma">
@@ -165,11 +267,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.admin-requests | Получение результатов пользователей по тесту без карточки пользователя" />
-        <item itemvalue="HTTP Request.test-system | Получение результатов теста для пользователя" />
-        <item itemvalue="HTTP Request.admin-requests | Данные о пользователе вместе с его билетами для профиля#2" />
+        <item itemvalue="HTTP Request.test-system | Получение критерия оценивания за тест по баллам, которые набрал за тест пользователь" />
+        <item itemvalue="HTTP Request.test-system | Получение ответов на тест для пользователя(по resultId)" />
+        <item itemvalue="HTTP Request.login-user | user1" />
         <item itemvalue="HTTP Request.admin-requests | Данные о пользователе вместе с его билетами для профиля#1" />
-        <item itemvalue="HTTP Request.admin-requests | Данные о пользователе вместе с его билетами для профиля" />
+        <item itemvalue="HTTP Request.test-system | Сохранение ответов пользователя на вопросы теста" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +293,11 @@
       <workItem from="1715441812291" duration="10052000" />
       <workItem from="1715511948471" duration="33986000" />
       <workItem from="1715622565399" duration="9092000" />
-      <workItem from="1715633266427" duration="4075000" />
+      <workItem from="1715633266427" duration="5264000" />
+      <workItem from="1715797027914" duration="12206000" />
+      <workItem from="1715877409230" duration="5023000" />
+      <workItem from="1716014750596" duration="59001000" />
+      <workItem from="1716136803597" duration="25929000" />
     </task>
     <task id="LOCAL-00001" summary="init project: db migration + spring security">
       <option name="closed" value="true" />
@@ -225,7 +331,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715552122101</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add backend 3 path, the end + http client requests">
+      <option name="closed" value="true" />
+      <created>1715638507026</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715638507026</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +362,13 @@
     <MESSAGE value="Add backend 1 path" />
     <MESSAGE value="Add backend 2 path" />
     <MESSAGE value="Add backend 3 path" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add backend 3 path" />
+    <MESSAGE value="Add backend 3 path, the end" />
+    <MESSAGE value="Add backend 3 path, the end + http client requests" />
+    <MESSAGE value="Add angular frontend 1 part" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add angular frontend 1 part" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

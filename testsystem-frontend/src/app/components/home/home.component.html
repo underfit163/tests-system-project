@@ -1,0 +1,15 @@
+<mat-card class="mat-card">
+  <mat-card-header>
+    <div mat-card-avatar class="header-image"></div>
+    <mat-card-title *ngIf="!isLogged">Добро пожаловать!</mat-card-title>
+    <mat-card-title *ngIf="isLogged">Добро пожаловать, {{currentUser?.login}}!</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image class="card-image" src="https://russiaedu.ru/media/cache/image_md_resize/uploads/upload-images/2020/05/11/-wHoM0DmXdQ.jpg" alt="Система тестирования Самарского университета">
+  <mat-card-content style="text-align: justify">
+    <mat-card-title>Вы попали на страницу системы тестирования!</mat-card-title>
+    <mat-card-title *ngIf="isLogged">Так как ваша роль: {{currentUser?.role}}.</mat-card-title>
+    <mat-card-title *ngIf="!isLogged">Web приложение, позволяет проходить различные тесты, получать результаты по ним и многое другое.</mat-card-title>
+    <mat-card-title *ngIf="isAdmin">Вам разрешено делать все что вам пожелается: Проходить различные тесты, просматривать результаты для каждого пользователя.</mat-card-title>
+    <mat-card-title *ngIf="isUser">Вам разрешено проходить различные тесты и просматривать свои результаты по ним.</mat-card-title>
+  </mat-card-content>
+</mat-card>

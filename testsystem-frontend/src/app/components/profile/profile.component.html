@@ -1,0 +1,35 @@
+<mat-card class="mat-card">
+    <mat-card-header>
+        <mat-card-title>Профиль пользователя: {{currentUser.login}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image class="card-image" src="https://mobile-comp.com/images/user.png" alt="Фото пользователя">
+    <mat-card-content style="text-align: left">
+        <mat-card-title>Имя пользователя: {{currentUser.name}}</mat-card-title>
+        <mat-card-title>Почта пользователя: {{currentUser.email}}</mat-card-title>
+        <mat-card-title>Роль пользователя: {{currentUser.role}}</mat-card-title>
+        <mat-card-title>Дата рождения: {{currentUser.birthday}}</mat-card-title>
+        <mat-card-title>Дата начала работы: {{currentUser.startWork}}</mat-card-title>
+        <mat-card-title>Номер цеха: {{currentUser.workNumber}}</mat-card-title>
+        <mat-card-title>Карточки пользователя:</mat-card-title>
+        <div *ngIf="!currentUser.tickets || currentUser.tickets.length === 0">Нет карточек</div>
+        <mat-accordion *ngIf="currentUser.tickets && currentUser.tickets.length > 0">
+            <mat-expansion-panel *ngFor="let ticket of currentUser.tickets">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Номер: {{ ticket.id }}
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Цвет: {{ ticket.color }}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <div>
+                    <p><strong>Причина:</strong> {{ ticket.reasonWithdrawal }} </p>
+                    <p><strong>Дата получения:</strong> {{ ticket.dateWithdrawal}}</p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </mat-card-content>
+</mat-card>
+
+
+

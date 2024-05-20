@@ -1,0 +1,14 @@
+<div class="tests-wrapper">
+  <mat-grid-list cols="2" rowHeight="50vh">
+    <mat-grid-tile *ngFor="let test of tests">
+      <mat-card class="test-card"  (click)="navigateToTest(test.id)">
+        <mat-card-header>
+          <mat-card-title>{{ test.testName }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ test.description }}</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

@@ -5,7 +5,7 @@ import com.underfit.testsystembackend.dto.OptionDto;
 import com.underfit.testsystembackend.entity.Option;
 import org.mapstruct.*;
 
-@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = MappingConstants.ComponentModel.SPRING)
+@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = MappingConstants.ComponentModel.SPRING, uses = {QuestionMapper.class})
 public interface OptionMapper {
     Option toEntity(OptionDto optionDto);
 

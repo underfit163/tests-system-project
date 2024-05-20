@@ -3,6 +3,8 @@ jwtExpirationHours: 24
 server:
   port: 8080
 spring:
+  main:
+    allow-circular-references: true
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5433/testsystem

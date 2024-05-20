@@ -1,0 +1,29 @@
+.tests-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+mat-grid-list {
+  width: 100%;
+  max-width: 1200px;
+}
+
+mat-grid-tile {
+  display: flex;
+  justify-content: center;
+}
+
+.test-card {
+  width: 100%;
+  max-width: 500px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.test-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

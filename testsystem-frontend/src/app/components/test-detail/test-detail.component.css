@@ -1,0 +1,19 @@
+.test-container {
+    margin: 20px;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.answered {
+    background-color: #e8f5e9 !important; /* Green background */
+}

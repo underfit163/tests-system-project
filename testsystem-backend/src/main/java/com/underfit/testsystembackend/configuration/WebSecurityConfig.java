@@ -51,7 +51,7 @@ public class WebSecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(AbstractHttpConfigurer::disable)//чтобы не передавать csrf-токен(дополнительная защита)
-                .cors(AbstractHttpConfigurer::disable)
+                //.cors(AbstractHttpConfigurer::disable)
                 .exceptionHandling(httpSecurityExceptionHandlingConfigurer ->
                         httpSecurityExceptionHandlingConfigurer
                                 .authenticationEntryPoint(unauthorizedHandler)

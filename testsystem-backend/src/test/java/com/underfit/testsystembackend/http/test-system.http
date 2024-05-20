@@ -1,3 +1,7 @@
+### Данные о пользователе вместе с его билетами для профиля
+GET http://localhost:8080/api/v1/user/2/info
+Authorization: Bearer {{jwt}}
+
 ### Получение всех тестов системы
 GET http://localhost:8080/api/v1/test-system/tests
 Authorization: Bearer {{jwt}}

@@ -1,0 +1,35 @@
+<div class="test-container" *ngIf="test">
+    <h1>{{ test.testName }}</h1>
+    <p>{{ test.description }}</p>
+
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let question of test.questions"
+                             >
+            <mat-expansion-panel-header [ngClass]="{'answered': selectedOptions[question.id]}">
+                <mat-panel-title>
+                    {{ question.questionText }}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <mat-radio-group
+                    class="options-container"
+                    [(ngModel)]="selectedOptions[question.id]"
+                    (ngModelChange)="onSelectOption(question.id, $event)"
+            >
+                <mat-radio-button *ngFor="let option of question.options" [value]="option.id">
+                    {{ option.optionText }}
+                </mat-radio-button>
+            </mat-radio-group>
+
+        </mat-expansion-panel>
+    </mat-accordion>
+
+    <div class="actions">
+        <mat-slide-toggle [(ngModel)]="saveAnswers">Сохранить ответы</mat-slide-toggle>
+        <button mat-raised-button color="primary" (click)="submitTest()" [disabled]="!allQuestionsAnswered()">
+            Отправить результат
+        </button>
+    </div>
+
+    <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+</div>

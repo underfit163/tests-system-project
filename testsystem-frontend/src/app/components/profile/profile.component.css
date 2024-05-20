@@ -1,0 +1,25 @@
+.mat-card {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.card-image {
+  max-height: 100px;
+  margin: 20px auto;
+}
+
+.header-image {
+  background-image: url('https://mobile-comp.com/images/user.png');
+  background-size: cover;
+  margin-top: -10px;
+}
+
+mat-expansion-panel {
+  margin: 5px 0;
+}
+
+mat-panel-title, mat-panel-description {
+  display: flex;
+  flex-direction: column;
+}
+

@@ -1,0 +1,44 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.content {
+  flex: 1 0 auto;
+  margin-bottom: 10px;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.mat-toolbar {
+  background-color: cornflowerblue;
+  color: white;
+  min-height: 80px;
+}
+
+.mat-button {
+  color: white;
+}
+
+.active {
+  font-weight: bold;
+  background-color: #0f34ef;
+}
+
+.active:active {
+  font-weight: bold;
+  background-color: #0f34ef;
+}
+
+.univ-link {
+  color: white;
+  text-decoration: none;
+}
+

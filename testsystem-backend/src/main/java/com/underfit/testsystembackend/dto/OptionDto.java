@@ -18,4 +18,5 @@ public class OptionDto implements Serializable {
     private Long id;
     private String optionText;
     private Integer score;
+    private QuestionDto question;
 }

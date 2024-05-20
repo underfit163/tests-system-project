@@ -1,0 +1,29 @@
+<mat-card *ngIf="result">
+    <mat-card-header>
+        <mat-card-title>Результаты теста</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p style="font-size: 1.1rem">Набранный балл: {{ result.score }}</p>
+        <div *ngIf="assessment">
+            <p style="font-size: 1.1rem"><strong>Оценка: {{ assessment.assessmentName }}</strong></p>
+            <p style="font-size: 1.1rem">Описание: {{ assessment.resultDescription }}</p>
+        </div>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="acceptResult(true)">Принять результат</button>
+            <button mat-raised-button color="warn" (click)="acceptResult(false)">Отклонить результат</button>
+        </mat-card-actions>
+        <div *ngIf="answers">
+            <div *ngFor="let answer of answers" class="answer">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>{{ answer.option.question.questionText }}</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>Ответ: {{ answer.option.optionText }}</p>
+                        <p>Баллы за ответ: {{ answer.option.score }}</p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
