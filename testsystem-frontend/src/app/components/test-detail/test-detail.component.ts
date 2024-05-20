@@ -133,10 +133,10 @@ export class TestDetailComponent {
 
     navigateToResultPage() {
         this.router.navigate(['test', this.testId, 'result'], {
-            state: {
-                result: this.result,
-                answers: this.answers
-            }
-        });
+          state: {
+            result: this.result,
+            answers: this.answers
+          }
+        }).then(r => window.scrollTo(0, 0));
     }
 }

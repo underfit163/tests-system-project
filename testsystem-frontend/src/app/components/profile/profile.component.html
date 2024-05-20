@@ -9,7 +9,7 @@
         <mat-card-title>Роль пользователя: {{currentUser.role}}</mat-card-title>
         <mat-card-title>Дата рождения: {{currentUser.birthday}}</mat-card-title>
         <mat-card-title>Дата начала работы: {{currentUser.startWork}}</mat-card-title>
-        <mat-card-title>Номер цеха: {{currentUser.workNumber}}</mat-card-title>
+        <mat-card-title>Номер работы: {{currentUser.workNumber}}</mat-card-title>
         <mat-card-title>Карточки пользователя:</mat-card-title>
         <div *ngIf="!currentUser.tickets || currentUser.tickets.length === 0">Нет карточек</div>
         <mat-accordion *ngIf="currentUser.tickets && currentUser.tickets.length > 0">

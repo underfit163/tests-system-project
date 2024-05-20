@@ -1,0 +1,12 @@
+<h1 mat-dialog-title class="dialog-title">Ответы</h1>
+<div mat-dialog-content class="dialog-content">
+  <mat-list>
+    <mat-list-item *ngFor="let answer of data.answers" class="answer-item">
+      <div mat-line class="question-text">{{ answer.option.question.questionText }}</div>
+      <div mat-line class="option-text">{{ answer.option.optionText }} : {{ answer.option.score }} балл</div>
+    </mat-list-item>
+  </mat-list>
+</div>
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-button (click)="onClose()">Закрыть</button>
+</div>

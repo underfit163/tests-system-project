@@ -53,6 +53,6 @@ export class TestSystemService {
   }
 
   getAnswersByResultId(resultId: number) {
-    return this.http.get<Array<AnswerDto>>(HOST + API + '/answers/result' + resultId, httpOptions);
+    return this.http.get<Array<AnswerDto>>(HOST + API + '/answers/result' + '/' + resultId, httpOptions);
   }
 }

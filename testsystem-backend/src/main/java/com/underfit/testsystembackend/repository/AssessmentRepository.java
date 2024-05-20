@@ -10,6 +10,6 @@ import java.util.Optional;
 
 public interface AssessmentRepository extends JpaRepository<Assessment, Long> {
 
-    @Query("select a from Assessment a where a.test.id = :id and a.minScore <= :score and a.maxScore > :score")
+    @Query("select a from Assessment a where a.test.id = :id and a.minScore <= :score and a.maxScore >= :score")
     Optional<Assessment> findAssessmentByTestIdAndScore(@Param("id") @NonNull Long id, @Param("score") @NonNull Integer score);
 }
