@@ -1,1 +1,136 @@
-<p>admin-results works!</p>
+<div class="container">
+  <mat-card>
+    <mat-card-title>Загрузить файл с результатами CSV</mat-card-title>
+    <mat-card-content>
+      <form (submit)="uploadCsv()">
+        <input type="file" (change)="onFileChange($event)"/>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!csvFile">Загрузить</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>Фильтрация результатов</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="filterForm" (ngSubmit)="applyFilter()">
+        <div class="form-group">
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Балл (Min)</mat-label>
+            <input matInput type="number" formControlName="scoreGte">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Балл (Max)</mat-label>
+            <input matInput type="number" formControlName="scoreLte">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Стаж (Min)</mat-label>
+            <input matInput type="number" formControlName="countYearWorkGte">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Стаж (Max)</mat-label>
+            <input matInput type="number" formControlName="countYearWorkLte">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Возраст (Min)</mat-label>
+            <input matInput type="number" formControlName="ageGte">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Возраст (Max)</mat-label>
+            <input matInput type="number" formControlName="ageLte">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Номер работы</mat-label>
+            <input matInput [min]="1" type="number" formControlName="userWorkNumber">
+          </mat-form-field>
+          <mat-checkbox formControlName="acceptResult">Принят</mat-checkbox>
+
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Тест</mat-label>
+            <mat-select formControlName="testId">
+              <mat-option></mat-option>
+              <mat-option *ngFor="let test of tests" [value]="test.id">{{ test.testName }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Пользователь</mat-label>
+            <mat-select formControlName="userId">
+              <mat-option></mat-option>
+              <mat-option *ngFor="let user of users" [value]="user.id">{{ user.name }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" type="submit">Применить фильтр</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>Результаты пользователей</mat-card-title>
+    <mat-card-content>
+      <table mat-table [dataSource]="dataSource" matSort>
+        <ng-container matColumnDef="testName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Название теста</th>
+          <td mat-cell *matCellDef="let result">{{ result.test.testName }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="userName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Имя пользователя</th>
+          <td mat-cell *matCellDef="let result">{{ result.user.name }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="birthday">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Дата рождения</th>
+          <td mat-cell *matCellDef="let result">{{ result.user.birthday }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="startWork">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Дата начала работы</th>
+          <td mat-cell *matCellDef="let result">{{ result.user.startWork }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="workNumber">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Номер работы</th>
+          <td mat-cell *matCellDef="let result">{{ result.user.workNumber }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Номер тестирования</th>
+          <td mat-cell *matCellDef="let result">{{ result.id }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="score">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Балл</th>
+          <td mat-cell *matCellDef="let result">{{ result.score }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="assessmentName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Итог</th>
+          <td mat-cell *matCellDef="let result">{{ result.assessment?.assessmentName || 'N/A' }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="acceptResult">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Принято</th>
+          <td mat-cell
+              *matCellDef="let result">{{ result.acceptResult != null ? (result.acceptResult ? 'Да' : 'Нет') : ''}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="openResultDetails(row)"></tr>
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="8">Данные по запросу не найдены</td>
+        </tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </mat-card-content>
+  </mat-card>
+</div>

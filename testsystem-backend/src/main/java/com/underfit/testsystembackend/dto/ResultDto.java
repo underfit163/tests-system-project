@@ -20,4 +20,5 @@ public class ResultDto implements Serializable {
     private Boolean acceptResult;
     private UserDto user;
     private TestDto test;
+    private AssessmentDto assessment;
 }

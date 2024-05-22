@@ -75,6 +75,7 @@ public class TestSystemServiceImpl implements TestSystemService {
     @Override
     public ResultDto createResult(CreateResultDto createResultDto) {
         log.info("Result before mapping: {}", createResultDto);
+        if (createResultDto.getAcceptResult() == null) createResultDto.setAcceptResult(true);
         Result result = resultMapper.toEntity(createResultDto);
         result.setUser(userRepository
                 .findById(createResultDto.getUserId())

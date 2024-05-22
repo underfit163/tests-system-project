@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.half-width {
+  width: 48%;
+  margin-right: 4%;
+}
+
+.quarter-width {
+  width: 24%;
+  margin-right: 2%;
+}
+
+mat-card {
+  width: 100%;
+  max-width: 800px;
+}
+
+mat-divider {
+  margin: 10px 0;
+}

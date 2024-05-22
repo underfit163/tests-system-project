@@ -7,21 +7,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f2f8192-076f-4afc-a002-5a040bfd4c45" name="Changes" comment="Add angular frontend 1 part">
-      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/user-results/answer-dialog/answer-dialog.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/user-results/answer-dialog/answer-dialog.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/user-results/answer-dialog/answer-dialog.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/user-results/answer-dialog/answer-dialog.component.ts" afterDir="false" />
+    <list default="true" id="9f2f8192-076f-4afc-a002-5a040bfd4c45" name="Changes" comment="Add angular frontend 2 part">
+      <change afterPath="$PROJECT_DIR$/diagram-class.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagram-class3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/repository/AssessmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/repository/AssessmentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/controller/TestSystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/controller/TestSystemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/ResultDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/dto/ResultDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/TestSystemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/service/TestSystemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/admin-results/admin-results.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/admin-results/admin-results.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/admin-results/admin-results.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/admin-results/admin-results.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/admin-results/admin-results.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/admin-results/admin-results.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/auth/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/auth/login/login.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/auth/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/auth/login/login.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/auth/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/auth/register/register.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/profile/profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/profile/profile.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/test-detail/test-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/test-detail/test-detail.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/user-results/user-results.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/user-results/user-results.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/create-test/create-test.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/create-test/create-test.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/create-test/create-test.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/create-test/create-test.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/create-test/create-test.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/create-test/create-test.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/test-result/test-result.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/test-result/test-result.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/test-result/test-result.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/test-result/test-result.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/user-results/answer-dialog/answer-dialog.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/answer-dialog/answer-dialog.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/user-results/answer-dialog/answer-dialog.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/answer-dialog/answer-dialog.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/user-results/answer-dialog/answer-dialog.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/answer-dialog/answer-dialog.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/user-results/answer-dialog/answer-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/answer-dialog/answer-dialog.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/user-results/user-results.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/user-results/user-results.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/user-results/user-results.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/user-results/user-results.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/models/result-dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/result-dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/services/test-system.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/services/test-system.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/models/result-filter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/models/result-filter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/services/user.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,44 +83,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ControllerAdviceClass&quot;: &quot;com.underfit.testsystembackend.exception.RestErrorHandler&quot;,
-    &quot;DtoCreateDialog.HAS_SETTERS_INITIAL_INITIAL_PROP_KEY&quot;: &quot;true&quot;,
-    &quot;DtoCreateDialog.IS_JSON_IGNORE_UNKNOWN_PROPERTIES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.haulmont.ampsbb.spring.data.query.method.intention.QueryMethodDialogView.isSortable&quot;: &quot;true&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
-    &quot;database.data.extractors.current.id&quot;: &quot;SQL Inserts&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;temurin-17&quot;,
-    &quot;last_directory_selection&quot;: &quot;D:/projects/testsystem/testsystem-backend/src/main/java/com/underfit/testsystembackend&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/projects/testsystem/testsystem-frontend/src/app/configs&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\projects\\testsystem\\testsystem-frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ControllerAdviceClass": "com.underfit.testsystembackend.exception.RestErrorHandler",
+    "DtoCreateDialog.HAS_SETTERS_INITIAL_INITIAL_PROP_KEY": "true",
+    "DtoCreateDialog.IS_JSON_IGNORE_UNKNOWN_PROPERTIES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.haulmont.ampsbb.spring.data.query.method.intention.QueryMethodDialogView.isSortable": "true",
+    "database.data.extractors.current.export.id": "SQL Inserts",
+    "database.data.extractors.current.id": "SQL Inserts",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "temurin-17",
+    "last_directory_selection": "D:/projects/testsystem/testsystem-backend/src/main/java/com/underfit/testsystembackend",
+    "last_opened_file_path": "D:/projects/testsystem",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+    "ts.external.directory.path": "D:\\projects\\testsystem\\testsystem-frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projects\testsystem\testsystem-frontend\src\app\configs" />
@@ -116,6 +129,7 @@
       <recent name="D:\projects\testsystem\testsystem-backend\src\main\java\com\underfit\testsystembackend\security" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\testsystem\testsystem-frontend\src\app\components" />
       <recent name="D:\projects\testsystem\testsystem-backend\src\main\resources\db\changelog\changeset" />
       <recent name="D:\projects\testsystem\testsystem-backend\src\main\resources\db\changelog" />
     </key>
@@ -129,13 +143,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.TestsystemBackendApplication">
-    <configuration name="admin-requests | Создание теста с вопросами и вариантами ответа, а также критериями оценивания для админа" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" index="5" requestIdentifier="Создание теста с вопросами и вариантами ответа, а также критериями оценивания для админа" runType="Run single request">
+    <configuration name="admin-requests | Фильтрация по результатам для админа" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" index="7" requestIdentifier="Фильтрация по результатам для админа" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="admin-requests | Получение результатов теста для пользователя" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" index="3" requestIdentifier="Получение результатов теста для пользователя" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="login-user | user2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/login-user.http" index="2" requestIdentifier="user2" runType="Run single request">
+    <configuration name="login-user | admin1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/login-user.http" index="3" requestIdentifier="admin1" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="test-system | Получение ответов на тест для пользователя(по resultId)" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/test-system.http" index="9" requestIdentifier="Получение ответов на тест для пользователя(по resultId)" runType="Run single request">
@@ -174,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.admin-requests | Фильтрация по результатам для админа" />
+        <item itemvalue="HTTP Request.login-user | admin1" />
         <item itemvalue="HTTP Request.test-system | Получение ответов на тест для пользователя(по resultId)" />
         <item itemvalue="HTTP Request.admin-requests | Получение результатов теста для пользователя" />
         <item itemvalue="HTTP Request.test-system | Сохранение результата теста для пользователя" />
-        <item itemvalue="HTTP Request.admin-requests | Создание теста с вопросами и вариантами ответа, а также критериями оценивания для админа" />
-        <item itemvalue="HTTP Request.login-user | user2" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +219,8 @@
       <workItem from="1715877409230" duration="5023000" />
       <workItem from="1716014750596" duration="59001000" />
       <workItem from="1716136803597" duration="26575000" />
-      <workItem from="1716227669289" duration="16774000" />
+      <workItem from="1716227669289" duration="17265000" />
+      <workItem from="1716286974275" duration="26872000" />
     </task>
     <task id="LOCAL-00001" summary="init project: db migration + spring security">
       <option name="closed" value="true" />
@@ -255,7 +270,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716164913362</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add angular frontend 2 part">
+      <option name="closed" value="true" />
+      <created>1716245571122</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716245571122</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +304,8 @@
     <MESSAGE value="Add backend 3 path, the end" />
     <MESSAGE value="Add backend 3 path, the end + http client requests" />
     <MESSAGE value="Add angular frontend 1 part" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add angular frontend 1 part" />
+    <MESSAGE value="Add angular frontend 2 part" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add angular frontend 2 part" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

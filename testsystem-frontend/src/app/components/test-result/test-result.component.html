@@ -4,9 +4,9 @@
     </mat-card-header>
     <mat-card-content>
         <p style="font-size: 1.1rem">Набранный балл: {{ result.score }}</p>
-        <div *ngIf="assessment">
-            <p style="font-size: 1.1rem"><strong>Оценка: {{ assessment.assessmentName }}</strong></p>
-            <p style="font-size: 1.1rem">Описание: {{ assessment.resultDescription }}</p>
+        <div *ngIf="result.assessment">
+            <p style="font-size: 1.1rem"><strong>Оценка: {{ result.assessment.assessmentName }}</strong></p>
+            <p style="font-size: 1.1rem">Описание: {{ result.assessment.resultDescription }}</p>
         </div>
         <mat-card-actions>
             <button mat-raised-button color="primary" (click)="acceptResult(true)">Принять результат</button>

@@ -26,8 +26,9 @@
         </mat-form-field>
       </div>
 
-      <div>
+      <div class="button-row">
         <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Войти</button>
+        <button mat-raised-button color="accent" type="button" [disabled]="form.invalid">Восстановить пароль</button>
       </div>
       <div *ngIf="f.submitted && isLoginFailed" class="alert alert-warning" role="alert">
         Ошибка входа. {{ errorMessage }}

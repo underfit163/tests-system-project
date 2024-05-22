@@ -5,7 +5,7 @@ import {
   MatDialogRef
 } from "@angular/material/dialog";
 import {MatListModule} from "@angular/material/list";
-import {AnswerDto} from "../../../models/answer-dto";
+import {AnswerDto} from "../../models/answer-dto";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatButton} from "@angular/material/button";
 import {MatLine} from "@angular/material/core";

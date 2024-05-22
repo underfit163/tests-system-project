@@ -34,10 +34,8 @@ export class UserService {
         return this.http.post<CreateTestDto>(HOST + API + '/create/test', test, httpOptions);
     }
 
-    createResultsByCSV(file: File) {
-        const formData: FormData = new FormData();
-        formData.append('file', file, file.name);
-        return this.http.post<Array<ResultDto>>(HOST + API + '/results/upload', formData);
+    createResultsByCSV(file: FormData) {
+        return this.http.post<Array<ResultDto>>(HOST + API + '/results/upload', file);
     }
 
     filterResults(filter: ResultFilter) {

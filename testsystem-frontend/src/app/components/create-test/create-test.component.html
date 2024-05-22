@@ -1,1 +1,79 @@
-<p>create-test works!</p>
+<div class="container">
+  <mat-card>
+    <mat-card-title>Создание теста</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="testForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="full-width">
+          <mat-label>Имя теста</mat-label>
+          <input matInput formControlName="testName">
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <mat-label>Описание теста</mat-label>
+          <textarea matInput formControlName="description"></textarea>
+        </mat-form-field>
+
+        <h3>Вопрос</h3>
+        <div formArrayName="questions">
+          <div *ngFor="let question of questions.controls; let i=index" [formGroupName]="i">
+            <mat-form-field class="full-width">
+              <mat-label>Текст вопроса</mat-label>
+              <input matInput formControlName="questionText">
+            </mat-form-field>
+            <button mat-icon-button color="warn" (click)="removeQuestion(i)">
+              <mat-icon>delete</mat-icon>
+            </button>
+            <h4>Ответ</h4>
+            <div formArrayName="options">
+              <div *ngFor="let option of getOptionsControls(i).controls; let j=index" [formGroupName]="j">
+                <mat-form-field class="half-width">
+                  <mat-label>Текст ответа</mat-label>
+                  <input matInput formControlName="optionText">
+                </mat-form-field>
+                <mat-form-field class="quarter-width">
+                  <mat-label>Балл</mat-label>
+                  <input matInput type="number" formControlName="score">
+                </mat-form-field>
+                <button mat-icon-button color="warn" (click)="removeOption(i, j)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div>
+            </div>
+            <button mat-button type="button" (click)="addOption(i)">Добавить ответ</button>
+            <mat-divider></mat-divider>
+          </div>
+        </div>
+        <button mat-button type="button" (click)="addQuestion()">Добавить вопрос</button>
+
+        <h3>Критерий оценивания</h3>
+        <div formArrayName="assessments">
+          <div *ngFor="let assessment of assessments.controls; let k=index" [formGroupName]="k">
+            <mat-form-field class="full-width">
+              <mat-label>Итог</mat-label>
+              <input matInput formControlName="assessmentName">
+            </mat-form-field>
+            <mat-form-field class="quarter-width">
+              <mat-label>Минимальный балл</mat-label>
+              <input matInput type="number" formControlName="minScore">
+            </mat-form-field>
+            <mat-form-field class="quarter-width">
+              <mat-label>Максимальный балл</mat-label>
+              <input matInput type="number" formControlName="maxScore">
+            </mat-form-field>
+            <mat-form-field class="full-width">
+              <mat-label>Описание критерия</mat-label>
+              <textarea matInput formControlName="resultDescription"></textarea>
+            </mat-form-field>
+            <button mat-icon-button color="warn" (click)="removeAssessment(k)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </div>
+        <button mat-button type="button" (click)="addAssessment()">Добавить критерий</button>
+
+        <button style="margin-top: 4rem; float: right" mat-raised-button color="primary" type="submit">Создать тест
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

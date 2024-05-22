@@ -1,4 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {ResultDto} from "../../models/result-dto";
 import {UserService} from "../../services/user.service";
 import {TokenStorageService} from "../../services/token-storage.service";
@@ -13,8 +13,7 @@ import {MatLine} from "@angular/material/core";
 import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
 import {NgForOf} from "@angular/common";
-import {AnswerDialogComponent} from "./answer-dialog/answer-dialog.component";
-import {finalize, forkJoin, switchMap} from "rxjs";
+import {AnswerDialogComponent} from "../answer-dialog/answer-dialog.component";
 
 @Component({
   selector: 'app-user-results',
@@ -28,14 +27,12 @@ import {finalize, forkJoin, switchMap} from "rxjs";
   templateUrl: './user-results.component.html',
   styleUrl: './user-results.component.css'
 })
-export class UserResultsComponent {
+export class UserResultsComponent implements OnInit, AfterViewInit {
   displayedColumns: string[] = ['testName', 'id', 'score', 'assessmentName', 'acceptResult'];
   dataSource: MatTableDataSource<ResultDto> = new MatTableDataSource<ResultDto>();
-  userId: number | undefined;
-
-
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
+  userId: number | undefined;
 
   constructor(private tokenStorageService: TokenStorageService,
               private userService: UserService,
@@ -49,26 +46,9 @@ export class UserResultsComponent {
 
   fetchUserResults() {
     this.userId = this.tokenStorageService.getUser().id;
-    this.userService.getResultsByUserId(this.userId).pipe(
-      switchMap(results => {
-        const assessmentRequests = results.map(result =>
-          this.testService.getAssessmentByTestIdAndScore(result.test.id, result.score).pipe(
-            switchMap(assessment => {
-              result.assessment = assessment;
-              return [result];
-            })
-          )
-        );
-        return forkJoin(assessmentRequests);
-      }),
-      finalize(() => {
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
-        this.dataSource.filterPredicate = this.customFilterPredicate();
-      })
-    ).subscribe({
+    this.userService.getResultsByUserId(this.userId).subscribe({
       next: (results) => {
-        this.dataSource = new MatTableDataSource(this.flattenData(results));
+        this.dataSource.data = results;
       },
       error: err => {
         alert("Ошибка получения данных! " + err.message);
@@ -76,25 +56,44 @@ export class UserResultsComponent {
     });
   }
 
-  flattenData(results: ResultDto[]): any[] {
-    return results.map(result => ({
-      ...result,
-      testName: result.test.testName,
-      assessmentName: result.assessment?.assessmentName || 'Н/А'
-    }));
-  }
-
-  customFilterPredicate() {
-    return (data: any, filter: string): boolean => {
+  ngAfterViewInit() {
+    this.dataSource.filterPredicate = (data: ResultDto, filter: string): boolean => {
       const transformedFilter = filter.trim().toLowerCase();
       const dataStr = Object.keys(data)
         .reduce((currentTerm: string, key: string) => {
-          if (key === 'acceptResult') return currentTerm + (data[key] != null ? (data[key] ? 'да ' : 'нет ') : '');
-          return currentTerm + (data[key] + ' ').toLowerCase()
-        }, '')
-        .trim();
+          let element;
+          switch (key) {
+            case 'acceptResult':
+              element = (data[key] != null ? (data[key] ? 'да ' : 'нет ') : '');
+              break;
+            case 'test':
+              element = data.test.testName;
+              console.log(element)
+              break;
+            case 'assessment':
+              element = data.assessment?.assessmentName;
+              break;
+            default: // @ts-ignore
+              element = data[key];
+              break;
+          }
+          return currentTerm + element + ' ';
+        }, '').toLowerCase().trim();
       return dataStr.indexOf(transformedFilter) !== -1;
     };
+
+    this.dataSource.sortingDataAccessor = (item, property) => {
+      switch (property) {
+        case 'testName':
+          return item.test.testName;
+        case 'assessmentName':
+          return item.assessment?.assessmentName;
+        default: // @ts-ignore
+          return item[property];
+      }
+    };
+    this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
   }
 
   applyFilter(event: Event) {

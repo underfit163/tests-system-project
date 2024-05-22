@@ -59,6 +59,7 @@ Authorization: Bearer {{jwt-admin}}
   "countYearWorkLte": 3,
   "userWorkNumber": 1,
   "scoreLte": 30,
+  "scoreGte": 30,
   "testId": 1
 }
 

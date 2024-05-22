@@ -2,6 +2,7 @@ package com.underfit.testsystembackend.controller;
 
 import com.underfit.testsystembackend.dto.CreateAnswerDto;
 import com.underfit.testsystembackend.dto.CreateResultDto;
+import com.underfit.testsystembackend.dto.ResultDto;
 import com.underfit.testsystembackend.service.TestSystemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -35,7 +36,10 @@ public class TestSystemController {
     @PreAuthorize("hasRole('ADMIN') or #createResultDto.userId == authentication.principal.id")
     @PostMapping("/create/result")
     public ResponseEntity<?> createResult(@RequestBody CreateResultDto createResultDto) {
-        return ResponseEntity.ok(testSystemService.createResult(createResultDto));
+        ResultDto resultDto = testSystemService.createResult(createResultDto);
+        resultDto.setAssessment(testSystemService
+                .getAssessmentByTestIdAndScore(resultDto.getTest().getId(), resultDto.getScore()));
+        return ResponseEntity.ok(resultDto);
     }
 
     @GetMapping("/assessment/{testId}/{score}")

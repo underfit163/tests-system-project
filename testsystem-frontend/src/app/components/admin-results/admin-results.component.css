@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  align-items: center;
+}
+
+.form-field {
+  flex: 1;
+  min-width: 150px;
+}
+
+mat-card {
+  margin-bottom: 16px;
+}
+
+mat-divider {
+  margin: 8px 0;
+}
