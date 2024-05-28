@@ -28,7 +28,7 @@ export class TestResultComponent implements OnInit {
             this.result = history.state.result;
             this.answers = history.state.answers;
         } else {
-            console.error('Не удалось получить данные результатов теста.');
+            alert('Не удалось получить данные результатов теста.');
         }
     }
 
@@ -39,7 +39,7 @@ export class TestResultComponent implements OnInit {
                 alert(`Результат ${accept ? 'принят' : 'отклонен'}`);
             },
             error: err => {
-                alert('Ошибка при обновлении принятия результата! ' + err.message);
+                alert('Ошибка при обновлении принятия результата! ' + err.error);
             }
         });
     }

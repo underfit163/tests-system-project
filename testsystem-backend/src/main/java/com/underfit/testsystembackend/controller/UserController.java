@@ -57,7 +57,7 @@ public class UserController {
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/results/upload")
-    public ResponseEntity<?> createResultsFromCsv(@RequestParam("file") MultipartFile file) throws IOException, CsvValidationException {
+    public ResponseEntity<?> createResultsFromCsv(@RequestParam("file") MultipartFile file) throws CsvValidationException, IOException {
         List<ResultDto> resultDtoList = userService.createResultsFromCsv(file);
         setAssessmentResults(resultDtoList);
         return ResponseEntity.ok(resultDtoList);

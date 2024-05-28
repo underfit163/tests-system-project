@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
-import {FormBuilder, FormGroup, ReactiveFormsModule} from "@angular/forms";
+import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {UserService} from "../../services/user.service";
 import {MatDialog, MatDialogModule} from "@angular/material/dialog";
 import {MatSort, MatSortModule} from "@angular/material/sort";
@@ -34,7 +34,7 @@ import {MatButton} from "@angular/material/button";
     MatSelectModule,
     MatInputModule,
     NgForOf,
-    MatButton, MatCheckboxModule],
+    MatButton, MatCheckboxModule, FormsModule],
   templateUrl: './admin-results.component.html',
   styleUrl: './admin-results.component.css'
 })
@@ -130,11 +130,12 @@ export class AdminResultsComponent implements OnInit, AfterViewInit {
 
     this.userService.createResultsByCSV(formData).subscribe({
       next: response => {
+        console.log(response)
         alert('Файл успешно загружен');
         this.applyFilter();
       },
       error: err => {
-        alert('Возникла ошибка при загрузке файла: ' + err.message);
+        alert('Возникла ошибка при загрузке файла: ' + err.error);
       }
     });
   }

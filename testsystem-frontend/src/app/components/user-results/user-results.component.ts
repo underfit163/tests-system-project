@@ -51,7 +51,7 @@ export class UserResultsComponent implements OnInit, AfterViewInit {
         this.dataSource.data = results;
       },
       error: err => {
-        alert("Ошибка получения данных! " + err.message);
+        alert("Ошибка получения данных! " + err.error);
       }
     });
   }

@@ -22,6 +22,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -90,28 +91,31 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<ResultDto> createResultsFromCsv(MultipartFile file) throws IOException, CsvValidationException {
         if (file.isEmpty()) throw new FileNotFoundException("Please upload a CSV file");
-        try (Reader reader = new BufferedReader(new InputStreamReader(file.getInputStream()));
-             CSVReader csvReader = new CSVReaderBuilder(reader).build()) {
-            String[] record;
-            List<Result> results = new ArrayList<>();
-            while ((record = csvReader.readNext()) != null) {
-                CreateResultDto createResultDto = new CreateResultDto();
-                createResultDto.setScore(Integer.parseInt(record[0]));
-                createResultDto.setAcceptResult(((record[1] != null) && (!record[1].isEmpty())) ? Boolean.parseBoolean(record[1]) : null);
-                createResultDto.setUserId(Long.parseLong(record[2]));
-                createResultDto.setTestId(Long.parseLong(record[3]));
-                Result result = resultMapper.toEntity(createResultDto);
-                result.setUser(userRepository
-                        .findById(createResultDto.getUserId())
-                        .orElseThrow(() -> new EntityNotFoundException("Пользователя с идентификатором %s не существует"
-                                .formatted(createResultDto.getUserId()))));
-                result.setTest(testRepository.findById(createResultDto.getTestId())
-                        .orElseThrow(() -> new EntityNotFoundException("Теста с идентификатором %s не существует"
-                                .formatted(createResultDto.getUserId()))));
-                results.add(result);
-            }
-            return resultRepository.saveAll(results).stream().map(resultMapper::toDto).toList();
+        if (!Objects.requireNonNull(file.getContentType()).endsWith("csv"))
+            throw new CsvValidationException("File format not CSV");
+        Reader reader = new BufferedReader(new InputStreamReader(file.getInputStream()));
+        CSVReader csvReader = new CSVReaderBuilder(reader).build();
+        String[] record;
+        List<Result> results = new ArrayList<>();
+        while ((record = csvReader.readNext()) != null) {
+            CreateResultDto createResultDto = new CreateResultDto();
+            createResultDto.setScore(Integer.parseInt(record[0]));
+            createResultDto.setAcceptResult(((record[1] != null) && (!record[1].isEmpty())) ? Boolean.parseBoolean(record[1]) : null);
+            createResultDto.setUserId(Long.parseLong(record[2]));
+            createResultDto.setTestId(Long.parseLong(record[3]));
+            Result result = resultMapper.toEntity(createResultDto);
+            result.setUser(userRepository
+                    .findById(createResultDto.getUserId())
+                    .orElseThrow(() -> new EntityNotFoundException("Пользователя с идентификатором %s не существует"
+                            .formatted(createResultDto.getUserId()))));
+            result.setTest(testRepository.findById(createResultDto.getTestId())
+                    .orElseThrow(() -> new EntityNotFoundException("Теста с идентификатором %s не существует"
+                            .formatted(createResultDto.getUserId()))));
+            results.add(result);
         }
+        csvReader.close();
+        return resultRepository.saveAll(results).stream().map(resultMapper::toDto).toList();
+
     }
 
     @Override

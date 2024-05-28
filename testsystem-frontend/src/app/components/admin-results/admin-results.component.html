@@ -2,8 +2,8 @@
   <mat-card>
     <mat-card-title>Загрузить файл с результатами CSV</mat-card-title>
     <mat-card-content>
-      <form (submit)="uploadCsv()">
-        <input type="file" (change)="onFileChange($event)"/>
+      <form (ngSubmit)="uploadCsv()">
+        <input type="file" accept="text/csv" (change)="onFileChange($event)"/>
         <button mat-raised-button color="primary" type="submit" [disabled]="!csvFile">Загрузить</button>
       </form>
     </mat-card-content>

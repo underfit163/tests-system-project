@@ -8,6 +8,7 @@
       </database-info>
     </database-infos>
   </component>
+  <component name="AmplicodeJpaPluginProjectSettings" mapperMethodToEntityPattern="to{ENTITY_NAME}" mapperMethodToDtoPattern="to{DTO_NAME}" mappingCollectionMethodNamingStrategy="PLURALIZE" />
   <component name="AmplicodePersistenceUnitSettings">
     <persistence-units>
       <persistence-unit name="Default">

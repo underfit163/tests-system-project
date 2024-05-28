@@ -107,7 +107,7 @@ export class CreateTestComponent  implements OnInit {
           this.router.navigate(['/tests']);
         },
         error: (err) => {
-          alert('Ошибка создания теста: ' + err.message);
+          alert('Ошибка создания теста: ' + err.error);
         }
       });
     } else {

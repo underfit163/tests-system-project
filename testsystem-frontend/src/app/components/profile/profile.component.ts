@@ -56,7 +56,7 @@ export class ProfileComponent {
                     this.currentUser = data;
                 },
                 error: err => {
-                    alert("Ошибка получения данных! " + err.message);
+                    alert("Ошибка получения данных! " + err.error);
                 }
             });
     }

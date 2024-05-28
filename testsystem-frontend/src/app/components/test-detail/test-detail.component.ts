@@ -59,7 +59,7 @@ export class TestDetailComponent {
                     this.updateProgress();
                 },
                 error: err => {
-                    alert("Ошибка получения данных! " + err.message);
+                    alert("Ошибка получения данных! " + err.error);
                 }
             });
         this.userId = this.tokenStorageService.getUser().id;
@@ -106,7 +106,7 @@ export class TestDetailComponent {
                             this.navigateToResultPage();
                         },
                         error: err => {
-                            alert("Ошибка получения данных! " + err.message);
+                            alert("Ошибка получения данных! " + err.error);
                         }
                     })
                 } else {
@@ -114,7 +114,7 @@ export class TestDetailComponent {
                 }
             },
             error: err => {
-                alert("Ошибка получения данных! " + err.message);
+                alert("Ошибка получения данных! " + err.error);
             }
         });
     }

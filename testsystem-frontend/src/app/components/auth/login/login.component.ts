@@ -39,7 +39,7 @@ export class LoginComponent {
 
 
   constructor(private authService: AuthService, private tokenStorage: TokenStorageService,
-              private fb: FormBuilder, private router: Router) {
+              private fb: FormBuilder) {
     this.form = this.fb.group({
       login: [null, [Validators.required]],
       password: [null, [Validators.required, Validators.minLength(5)]],
@@ -64,7 +64,7 @@ export class LoginComponent {
         this.redirectPage();
       },
       error: err => {
-        this.errorMessage = err.message;
+        this.errorMessage = err.error;
         this.isLoginFailed = true;
       }
     });

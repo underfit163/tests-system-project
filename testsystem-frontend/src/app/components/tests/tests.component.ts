@@ -35,7 +35,7 @@ export class TestsComponent {
           this.tests = data;
         },
         error: err => {
-          alert("Ошибка получения данных! " + err.message);
+          alert("Ошибка получения данных! " + err.error);
         }
       });
   }
