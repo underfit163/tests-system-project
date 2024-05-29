@@ -60,7 +60,7 @@ export class RegisterComponent {
       },
       error: err => {
         if (!(err.status == 200)) {
-          this.errorMessage = err.message;
+          this.errorMessage = err.error;
           this.isSignUpFailed = true;
           this.isSuccessful = false;
         } else {
