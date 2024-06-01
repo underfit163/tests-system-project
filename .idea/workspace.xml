@@ -8,9 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f2f8192-076f-4afc-a002-5a040bfd4c45" name="Changes" comment="Add angular frontend 3 part the end">
+      <change afterPath="$PROJECT_DIR$/testsystem-backend/src/main/resources/db/changelog/DDL/01-02-changelog.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/auth/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/auth/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsystem-frontend/src/app/components/auth/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-frontend/src/app/components/auth/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/testsystem-backend/src/main/java/com/underfit/testsystembackend/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +22,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="com.haulmont.ampjpb.JpaLiquibaseChangeLog" />
         <option value="com.haulmont.ampsbb.SpringConfiguration" />
         <option value="com.haulmont.ampjpb.JpaEntity" />
         <option value="com.haulmont.ampjpb.JpaRepository" />
@@ -35,6 +36,7 @@
         <option value="HTTP Public Environment File" />
         <option value="TypeScript File" />
         <option value="com.haulmont.ampjpb.NewClass" />
+        <option value="com.haulmont.ampjpb.JpaLiquibaseChangeLog" />
       </list>
     </option>
   </component>
@@ -47,6 +49,10 @@
 }</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MigrationScriptOptions">
+    <option name="ignoreImplicitObjects" value="true" />
+    <option name="ignoreSourceCode" value="false" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -119,10 +125,10 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.TestsystemBackendApplication">
-    <configuration name="admin-requests | Получение результатов теста для пользователя" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" index="3" requestIdentifier="Получение результатов теста для пользователя" runType="Run single request">
+    <configuration name="admin-requests | Фильтрация по результатам для админа" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" index="7" requestIdentifier="Фильтрация по результатам для админа" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="admin-requests | Фильтрация по результатам для админа" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" index="7" requestIdentifier="Фильтрация по результатам для админа" runType="Run single request">
+    <configuration name="admin-requests | Получение результатов теста для пользователя" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/admin-requests.http" index="3" requestIdentifier="Получение результатов теста для пользователя" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="login-user | admin1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/testsystem-backend/src/test/java/com/underfit/testsystembackend/http/login-user.http" index="3" requestIdentifier="admin1" runType="Run single request">
@@ -197,7 +203,8 @@
       <workItem from="1716286974275" duration="27836000" />
       <workItem from="1716402977282" duration="1616000" />
       <workItem from="1716924253423" duration="3963000" />
-      <workItem from="1717007530631" duration="2873000" />
+      <workItem from="1717007530631" duration="4994000" />
+      <workItem from="1717266792554" duration="4641000" />
     </task>
     <task id="LOCAL-00001" summary="init project: db migration + spring security">
       <option name="closed" value="true" />
@@ -271,7 +278,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716928162375</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add angular frontend 3 part the end">
+      <option name="closed" value="true" />
+      <created>1717012712650</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717012712650</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

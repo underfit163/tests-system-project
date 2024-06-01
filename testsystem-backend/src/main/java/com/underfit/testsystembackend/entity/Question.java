@@ -24,7 +24,7 @@ public class Question {
     @JoinColumn(name = "test_id")
     private Test test;
 
-    @OneToMany(mappedBy = "question", orphanRemoval = true)
+    @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Option> options = new LinkedHashSet<>();
 
     @Override

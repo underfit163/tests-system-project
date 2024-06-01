@@ -46,10 +46,10 @@ public class User {
     @Column(name = "work_number")
     private Long workNumber;
 
-    @OneToMany(mappedBy = "user", orphanRemoval = true)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Ticket> tickets = new LinkedHashSet<>();
 
-    @OneToMany(mappedBy = "user", orphanRemoval = true)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Result> results = new LinkedHashSet<>();
 
 }

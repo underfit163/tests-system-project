@@ -25,11 +25,11 @@ public class Test {
     @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
-    @OneToMany(mappedBy = "test", orphanRemoval = true)
+    @OneToMany(mappedBy = "test", cascade = CascadeType.ALL, orphanRemoval = true)
     @ToString.Exclude
     private Set<Question> questions = new LinkedHashSet<>();
 
-    @OneToMany(mappedBy = "test", orphanRemoval = true)
+    @OneToMany(mappedBy = "test", cascade = CascadeType.ALL, orphanRemoval = true)
     @ToString.Exclude
     private Set<Assessment> assessments = new LinkedHashSet<>();
 
